@@ -1,0 +1,14 @@
+/* к border'y применяются теги вида линий: двойная, пунктирная, точками и т.д.*/
+/* border: применяет обводку к блоку        */
+/* border-radius: скругление углов          */
+/* outline: Применяет обводку снаружи блока */
+.block {
+    border: 1PX double #000;
+    border-radius: 20px;
+}
+
+.button {
+    border: 1px solid #000;
+    border-radius: 0px 10px 10px 0px;
+    outline: 1px solid #000;
+}

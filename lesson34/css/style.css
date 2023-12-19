@@ -1,0 +1,32 @@
+body {
+    font-size: 30px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.img {
+    border: 1px double #000;
+}
+
+.block,
+.inline {
+    background: #e0d5c5;
+    display: block;
+}
+
+/*  ======================================================  */
+/* display позволяет сделать строчный элемент блочным, а блочный полустрочныйм, т.е.
+он не будет занимать всю ширину родителя                                             */
+/* Ощущается как очень полезно свойство. */
+.inline {
+    display: block;
+
+}
+
+.block {
+    display: inline-block;
+    max-width: 400px;
+    max-height: 500px;
+}

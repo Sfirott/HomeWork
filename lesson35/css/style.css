@@ -1,0 +1,33 @@
+body {
+    font-size: 30px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.img {
+    border: 1px double #000;
+}
+
+.block,
+.inline {
+    background: #e7d0ad;
+}
+
+.block {
+    padding: 30px;
+    margin: 30px;
+}
+
+/*  ======================================================  */
+/* opacity: прозрачность элемента                           */
+/* visibility решает показывать элемент или нет             */
+/* И opacity, и visibility хорошо работает со строчными элементами и с картинками      */
+/* overflow недает переполниться родителю, скрывает текст вне родителя, или добавляет  */
+/* скролл-бар, зависит от значения                                                     */
+.block {
+    opacity: 0.5;
+    visibility: visible;
+    overflow: auto;
+}
