@@ -1,0 +1,52 @@
+/* font-family (ff) включает нужный шрифт. */
+/* Есть 15 безопасных шрифтов которые применяются на всех устрайствах:
+1. Arial                6. Verdana        11. Trebuchet
+2. Times New Roman      7. Georgia        12. Tahoma
+3. Helvetica            8. Garamond       13. Arial Black
+4. Courier New          9. Palatino       14. Comic Sans MS
+5. Courier              10. Bookman       15. Impact                                             */
+/* Немного подробнее о них: https://coalla.ru/blogs/15-bezopasnyh-veb-shriftov                   */
+/* Если вводить шрифты через запятую, то при не работающем первом шрифте покажется второй и т.д. */
+/* Если подключать шрифты с сайта, то строки с подключением вставлять до link'a с CSS            */
+/* Сайт со шрифтами: https://fonts.google.com/ */
+/* В конце всегда пишется serif или sans-serif */
+
+/* font-size: (fs) размер шрифта        */
+/* line-height:(lh) высота строки       */
+/* text-align: (ta) выравнивание текста */
+/* font-weight:(fw) жирность шрифта     */
+/* font-style: (fs) задает курсив       */
+/* Если нужна жирность не безопасного шрифта, ее надо подключать отдельно. */
+/* .lorem-text {
+    font-family: Montserrat, sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: left;
+    font-weight: 700;
+    font-style: italic;
+} */
+
+.lorem-text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.lorem-big {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.lorem-sea {
+    text-shadow: 1px 1px 1px #46057c;
+    text-decoration: overline wavy;
+    text-shadow: #000;
+    word-spacing: 30px;
+    letter-spacing: 5px;
+}
+
+.lorem {
+    text-decoration: underline double;
+    letter-spacing: 5px;
+}
