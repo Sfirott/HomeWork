@@ -1,0 +1,48 @@
+body {
+    font-size: 40px;
+    background: #f3f3f6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.block {
+    margin: 5vw;
+    height: 50vh;
+    box-shadow: 0 0.5vw 3vw #0615633b;
+    border-radius: 2vw;
+    background: #fff;
+}
+
+/*  ======================================================  */
+
+.block {
+    background: url("../img/tiger.jpg") 10% 30% / 400px fixed repeat;
+    overflow: auto;
+    /* background-color: #fff; */
+
+    /* background-image: url("../img/tiger.jpg");
+    background-image делает задником картинку */
+
+    /* background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    background: linear-gradient красит задник градиентом,
+    либо линейным, либо радиальным */
+
+    /* background-repeat:no-repeat ;
+    background-repeat решает повторять задник или нет */
+
+    /* background-position: center;
+    background-position задает место заднику */
+
+    /* background-attachment: local, fixed, scroll;
+    local фиксирует задник на блоке.
+    fixed фиксирует задник на странице.
+    scroll фиксирует задник при скролле. */
+
+    /* background-size: 400px; Cover Contain
+    Сначала указывается ширина, а потом высота.
+    Cover заполняет блок при любых обстоятельствах.
+    Contain изображение всегда влезает в блок. */
+
+}
