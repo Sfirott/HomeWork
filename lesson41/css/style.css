@@ -1,0 +1,23 @@
+body {
+    font-size: 30px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.img {
+    border: 1px double #000;
+}
+
+.block,
+.inline {
+    background: #e7d0ad;
+}
+
+.block {
+    padding: 30px;
+    margin: 30px;
+}
+
+/*  ======================================================  */

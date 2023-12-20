@@ -1,0 +1,97 @@
+body {
+    font-size: 40px;
+    background: #16171b;
+    margin: 20px;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.flexbox {
+    display: flex;
+    border: 20px solid #edddbd;
+    min-height: 50vh;
+    box-shadow: 0 0 3.75rem -0.625rem #00000066;
+}
+
+.flexbox__item {
+    border: 20px solid #b9a074;
+}
+
+.flexbox__item:nth-child(2) .flexbox__content {
+    padding: 60px 40px;
+}
+
+.flexbox__content {
+    border: none;
+    padding: 40px;
+    background: linear-gradient(#6f4916, #7e5926);
+}
+
+/*  ======================================================  */
+.flexbox {
+    display: flex;
+
+    justify-content: center;
+    /* justify-content регулирует пространство между элементами. */
+    /* space-around создает одинаковое пространство вокруг каждого элемента.    */
+    /* space-between создает пространство только между элементами.              */
+    /* space-evenly создает равное пространство между элементами и краем блока. */
+
+    align-items: end;
+    /* align-items регулирует вертикальное положение элементов.        */
+
+    flex-wrap: wrap;
+    /* flex-wrap при wrap старается уместить контент в блок смещая его */
+    /* reverse переворачивает порядок умещения контента в блоке        */
+
+    flex-direction: row;
+    /* flex-direction позволяет менять направление оси.
+    row базовое значение.
+    column меняет оси x и y местами.
+    К двум предыдущим значемниям можно добавить reverse и поменять
+    их направление на противоположное.                                 */
+
+    /* flex-flow: row wrap
+    flex-flow это комбинация тегов flex-direction и flex-wrap
+    их значения вводятся через пробел.                                 */
+}
+
+.flexbox__item-one {
+    /* align-self: 0; */
+    /* align-self регулирует вертикально положение конкретного элемента     */
+
+    /* order: 3; */
+    /* order задает порядок блоков, что бы он работал нужно
+    каждому блоку прописать его очередность                                 */
+
+    /* flex-basis: 30%; */
+    /* flex-basis задает базовый размер пространства которое должен
+    занимать элемент внутри flex-box                                        */
+
+    flex-grow: 1;
+    /* flex-grow при значении 0 к элементу применяется его базовый размер
+    при значении 1 он занимает все свободное пространство.
+    Если прописать значение 1 нескольким элементам они будут
+    конкурировать за свободное пространство.Элемент базовый размер 
+    которого больше будет занимать больше свободного пространства.          */
+    
+    flex-shrink: 1;
+    /* flex-shrink разрешает элементу уменьшаться при необходимости, по
+    умолчанию всегда включен.                                               */ 
+}
+
+.flexbox__item-two {
+    /* order: 1; */
+    /* flex-shrink: 1; */
+    flex-grow: 1;
+}
+
+.flexbox__item-three {
+    /* order: 2; */
+    /* flex-shrink: 1; */
+    flex-grow: 1;
+}
