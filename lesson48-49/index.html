@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 48-49.</title>
+    <link rel="shortcut icon" href="html-logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<!-- ================================ПОДСКАЗКИ=================================== -->
+<!-- Закоментировать текст ctrl + /  -->
+<!-- Копировать текущую строчку вниз Alt+Shift+Down -->
+<!-- Выбрать место написания в конкретных местах Alt+ЛКМ -->
+<!-- Выделить что-то в нужном направлении Shift+Left/Right -->
+<!-- Выделить нужное целое слово Ctrl+Shift+Left/Right -->
+<!-- Обернуть выделенный текст в тег Alt+W -->
+<!-- Вырезать Ctrl+X -->
+<!-- Перемещение строки Alt + up,down -->
+<!-- ================================ПОДСКАЗКИ=================================== -->
+
+<body>
+    <!-- form: тег формы                                            -->
+    <!-- name: должно быть индивидуальным для каждой формы на сайте -->
+    <!-- autocomplete: авто-заполнение формы                        -->
+    <!-- input:  поле формы                                         -->
+    <!-- submit: отправит заполненные данные                        -->
+    <!-- reset:  сбросит заполненные данные                         -->
+    <!-- textarea: тег текстовой зоны                               -->
+    <!-- label: задает название форме                               -->
+    <!-- fieldset: объединяет формы в одном пространстве            -->
+    <!-- legend: дает название группе элементов в fieldset          -->
+
+    <!-- ============================УРОК 48================================== -->
+
+    <!-- <form name="contact">
+        <label for="iput">Форма 1</label>
+        <input type="text" id="input">
+        <br>
+        <label>
+            Форма 2
+            <input type="text">
+        </label>
+        <select name="sele">
+            <option value="">-- Выбрать -- </option>
+            <option value="ror1">Опция 1 </option>
+            <option value="ror2">Опция 2 </option>
+            <option value="ror3">Опция 3 </option>
+            <option value="ror4">Опция 4 </option>
+            <option value="ror5">Опция 5 </option>
+        </select>
+        <br>
+        <textarea cols="30" rows="10"></textarea>
+        <br>
+        <button type="submit">
+            Отправить
+        </button>
+        <button type="reset">
+            Очистить
+        </button> -->
+
+    <!-- <fieldset>
+        <legend></legend>
+        <label for="iput">Форма 1</label>
+        <input type="text" id="input">
+        <br>
+        <label>
+            Форма 2
+            <input type="text">
+        </label>
+        <button type="submit">
+            Отправить
+        </button>
+        <button type="reset">
+            Очистить
+        </button>
+    </fieldset>
+    </form> -->
+    <form>
+        <fieldset>
+            <legend>Контактная информация</legend>
+            <input type="text" placeholder="Ваше Имя">
+            <br>
+            <input type="text" placeholder="Ваша Фамилия">
+            <br>
+            <input type="tel" placeholder="Ваш номер телефона">
+            <br>
+            Подтвердите дату рождения.
+            <input type="date">
+            <button type="submit">
+                Отправить
+            </button>
+            <br>
+            <input type="text" placeholder="3 цифры с оборота карты">
+        </fieldset>
+    </form>
+    <br>
+    <!-- =================================УРОК 49=================================== -->
+    <!-- number: поле для ввода числовых значений                                    -->
+    <!-- mi-max: задает мин-макс-е значения для числового поля                       -->
+    <!-- step: задает шаг с которым будет меняться число при его скролле             -->
+    <!-- password: поле для ввода пороля, закрывает текс точками                     -->
+    <!-- tel: на самртфонах при вводе открывает раскладку с цифрами                  -->
+    <!-- email: полее для ввода почты, если не ввести @ выдаст ошибку                -->
+    <!-- checkbox: поле с галочками                                                  -->
+    <!-- radio: позволяет выбрать 1 пункт из нескольких, нужно задать одинаковое имя -->
+    <!-- search: поле с поиском на странице                                          -->
+    <!-- date: поле с выбором даты                                                   -->
+    <!-- file: поле для загрузки файла                                               -->
+    <!-- placeholder: подсказка внутри поля ввода                                    -->
+    <!-- required: контролирует заполненность поля                                   -->
+    <fieldset>
+        <legend>Инпуты</legend>
+        <form>
+            <fieldset>
+                <label for="">
+                    Текст
+                    <br>
+                    <input type="text" placeholder="Ваше имя" required>
+                </label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <label for="">
+                    Число
+                    <br>
+                    <input type="number" max="99" min="18" step="2">
+                </label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <label for="">
+                    Пороль
+                    <br>
+                    <input type="password">
+                </label>
+                </label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <label for="">
+                    Телефон
+                    <br>
+                    <input type="tel">
+                </label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <label for="">
+                    Почта
+                    <br>
+                    <input type="email">
+                </label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <label for="">
+                    <input type="checkbox">
+                    Чекбокс
+                </label>
+                <label for="">
+                    <input type="checkbox">
+                    Чекбокс
+                </label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <label for="">
+                    <input type="radio" name="radio">
+                    Радио 1
+                </label>
+                <label for="">
+                    <input type="radio" name="radio">
+                    Радио 2
+                </label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <label for="">
+                    Поиск
+                    <br>
+                    <input type="search">
+                </label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <label for="">
+                    Дата
+                    <br>
+                    <input type="date">
+                </label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <label for="">
+                    Файл
+                    <br>
+                    <input type="file">
+                </label>
+            </fieldset>
+            <br>
+            <br>
+            <button type="submit">
+                Отправить
+            </button>
+            <button type="reset">
+                Очистить
+            </button>
+        </form>
+    </fieldset>
+</body>
+
+</html>
