@@ -1,0 +1,124 @@
+body {
+    background: #262628;
+}
+
+.wrapper {
+    padding: 100px 15px;
+    height: 100vh;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1000px;
+    height: 100%;
+    border-radius: 15px;
+    border: 5px groove #e8dddd;
+    background: #19191a;
+}
+
+.inner {
+    display: flex;
+    position: relative;
+    height: 100%;
+    z-index: 1;
+}
+
+.block {
+    height: 300px;
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.842);
+
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.red {
+    background: linear-gradient(120deg, #eb3939, #f36da8);
+}
+
+.blue {
+    background: linear-gradient(120deg, #4539eb, #6dd8f3);
+}
+
+.orange {
+    background: linear-gradient(120deg, #ebd539, #f38e6d);
+}
+
+.green {
+    background: linear-gradient(120deg, #46d443, #6df3b5);
+}
+
+.purple {
+    background: linear-gradient(120deg, #8c39eb, #e06df3);
+}
+
+/* =================================================== */
+
+.red {
+    position: static;
+    top: 10vh;
+}
+
+.blue {
+    /* relative при этом значении блок не выбадает из общего потока                 */
+    position: relative;
+    /* Все дополнительные свойства работают для relative, но не работают для static */
+    top: 20vh;
+    bottom: auto;
+    left: auto;
+    right: 100px;
+    /* z-index изменяет позицию объекта в 3м измерении */
+    z-index: -1;
+}
+
+.orange {
+    /* absolute позиционируется относительно первого попавшегося родителя со значение отличным от 
+    static и вырывается из потока элементов */
+    position: absolute;
+    right: 55%;
+    bottom: 0;
+    z-index: -2;
+}
+
+.green {
+    /* fixed элемент фиксируется к viewport-у, если нет значений устанавливается относительно 
+    родителя, если есть, то относительно viewport-а, вырывается из потока элементов */
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+.purple {
+    /* sticky прилипает к границам viewport-а, и движется вместе с ней до конца родителя */
+    position: sticky;
+    top: 0;
+    z-index: -3;
+}
+
+.block-white{
+    position: fixed;
+    background: #e8dddd;
+    border-radius: 10px;
+    width: 47vw;
+    height: 100px;
+    left: 50%;
+    right: 50px;
+    bottom: 100px;
+}
+
+.circle{
+    position: absolute;
+    background: rgb(247, 58, 58);
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    left: 100px;
+    bottom: 50px;
+}
