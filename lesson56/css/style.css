@@ -1,0 +1,115 @@
+body {
+    background-color: #1d1d1f;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 2rem;
+}
+
+.wrapper {
+    padding: 50px;
+    min-height: 100%;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.link {
+    display: block;
+    background-color: #555;
+    border-radius: 2em;
+    padding: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+}
+
+.input {
+    display: block;
+    width: 100%;
+    padding: 2em;
+    margin-bottom: 100px;
+    font-size: inherit;
+}
+
+.button {
+    display: block;
+    background-color: #555;
+    border-radius: 2em;
+    padding: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: inherit;
+    color: inherit;
+    margin-bottom: 100px;
+    width: 100%;
+}
+
+/* ======================================================== */
+/* Псевдоклассы */
+/* hover меняет объект при наведении на него */
+.link:hover {
+    background: linear-gradient(142deg, #fae2a0 0%, #b12bf4 100%);
+    color: #fae2a0;
+}
+
+/* active меняет объект при нажатии на него   */
+.link:active {
+    background: linear-gradient(142deg, #b12bf4 0%, #fae2a0 100%);
+    color: #fae2a0;
+}
+
+.button:hover {
+    background: linear-gradient(142deg, #04f1f2 0%, #ffc743 100%);
+    color: #ffd700;
+}
+
+.button:active {
+    background: linear-gradient(142deg, #ffc743 0%, #04f1f2 100%);
+    color: #ffd700;
+}
+
+/* focus эффекты начинают работать только если выбрать элемент */
+:focus {
+    box-shadow: 0px 0px 20px #fae2a0;
+}
+
+
+/* first-child выбирает первый элемент в блоке                     */
+/* nth-child выбирает нужный элемент в блоке, нужно указать номер  */
+/* odd вводится в nth-child выбирает все нечетные элементы         */
+/* even вводится в nth-child выбирает все четные элементы          */
+/* last-child выбирает последний элемент в блоке                   */
+
+.list__item:nth-child(odd) {
+    color: #ffa500;
+}
+
+.list__item:first-child {
+    color: #8a2be2;
+}
+
+.list__item:nth-child(even) {
+    color: #800080;
+}
+
+.list__item:last-child {
+    color: #ffd700;
+}
+
+.block__title:first-child {
+    color: #fae2a0;
+}
+
+.block__item:nth-child(2) {
+    color: #04f1f2;
+}
+
+.block__item:last-child {
+    color: aquamarine;
+}
+
+.block__title:hover {
+    color: brown;
+}
