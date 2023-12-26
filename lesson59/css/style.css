@@ -1,0 +1,116 @@
+body {
+    background-color: #1e1e20;
+}
+
+.wrapper {
+    padding: 50px;
+    height: 100%;
+}
+
+.container {
+    position: relative;
+    height: 200px;
+    background-color: #444;
+}
+
+.block {
+    background-color: #fff;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+}
+
+/* ========================================================= */
+
+.block {
+    animation: move-block 5s infinite alternate;
+    border: 1px solid #1e1e20;
+    
+    /* animation-name название самой анимации, у нас это move-block */
+    /* animation-name: ;                                            */
+
+    /* animation-duration длительность воспроизведения анимации     */
+    /* animation-duration: ;                                        */
+    
+    /* animation-iteration-count задает количество раз проигрывания анимации */
+    /* infinite бесконечное проигрывание анимации                            */
+    /* animation-iteration-count: ;                                          */
+    
+    /* animation-direction позволяет управлять порядком воспроизведения анимации */
+    /* animation-direction: alternate ;                                          */
+    
+    /* animation-delay задает задержку перед анимацией */
+    /* animation-delay: ;                              */
+    
+    /* animation-fill-mode выбирает где будет конец анимации */
+    /* animation-fill-mode: forwards;                        */
+    
+    /* animation-timing-function позволяет настроить скорость анимации во время одной и той же 
+    длительности анимации           */
+    /* animation-timing-function: ; */
+}
+
+.container {
+    animation:color-block 5s infinite alternate ;
+}
+
+@keyframes move-block {
+    0% {
+        left: 50px;
+        bottom: 13px;
+        background: #ffffff;
+        border-radius: 100%;
+        width: 175px;
+        height: 175px;
+    }
+    50% {
+        animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    100% {
+        width: 100px;
+        height: 100px;
+        left: calc(100% - 150px);
+        bottom: 50px;
+        background: gold;
+        border-radius: 100%;
+        border: 3px solid #1e1e20;
+    }
+}
+
+@keyframes color-block {
+    0% {
+        background: #653ab4;
+    }
+    10%{
+        background: #7442a9;
+    }
+    20%{
+        background: #854b9d;
+    }
+    30%{
+        background: #955391;
+    }
+    40%{
+        background: #a75c84;
+    }
+    50%{
+        background: #b4637b;
+    }
+    60%{
+        background: #be6873;
+    }
+    70%{
+        background: #cc6f69;
+    }
+    80%{
+        background: #d9765f;
+    }
+    90%{
+        background: #e57c56;
+    }
+    100% {
+        background: #fc8845;
+    }
+}
+
+

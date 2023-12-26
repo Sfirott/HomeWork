@@ -1,0 +1,142 @@
+body {
+    background-color: #1b1b1d;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.wrapper {
+    padding: 50px;
+    min-height: 100%;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.grid {
+    margin-bottom: 200px;
+    padding-bottom: 200px;
+    border-bottom: 10px solid #363636;
+    min-height: 100vh;
+}
+
+.item {
+    border: 5px dashed #555;
+    font-size: 40px;
+    padding: .8em;
+    text-align: center;
+}
+
+/* ======================================================== */
+
+.grid-1 {
+    display: grid;
+    /* height: 800px; */
+    /* display: grid; так же как и flex выстраивает элементы, но по вертикали              */
+    /* inline-grid делает элементы блочно-строчными, но выстраивает элементы по вертикали  */
+
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-template-columns задает количество и ширину колонок                                   */
+
+    /* grid-template-rows: 200px 300px; */
+    /* grid-template-rows задает высоту строк в колонках */
+
+    /* 1fr занимает все пространство грида, если их несколько они делят пространство между собой  */
+
+    /* 3fr если значение больше 1, то колонка будет занимать ту часть процент которой занимает в  */
+    /* сумме всех колонок  1+1+3=5 3=60% от 5, 5=весь грид, или 100%       */
+
+    /* minmax задает мин-макс значение для колонки                         */
+
+    /* auto занимает столько пространства, сколько контента внутри колонки */
+
+    /* repeat позволяет задать количество и размер колонок, все они будут одинаковы,   */
+    /* repeat комбинируется сам с собой, можно после него указать еще несколько repeat */
+    /* сначала указывается кол-во колонок, потом их размер                             */
+
+
+    grid-template: 200px 300px / repeat(3, 1fr);
+    /* короткая запись размеров, сначала указывается размер строк, потом колонок */
+
+    /* justify-content: center; */
+    /* justify-content выравнивает ячейки внутри грида по горизонтали                  */
+    /* justify-items: end;                                                             */
+    /* justify-items выравнивает контент внутри грида по горизонтали, выравниваются не */
+    /* ячейки с колонками, в контент в них                                             */
+
+    /* align-content: center; */
+    /* align-content выравнивает ячейки внутри грида по вертикали                   */
+    /* align-items: end;                                                            */
+    /* align-items выравнивает контент внутри грида по вертикали, выравниваются не  */
+    /* ячейки с колонками, в контент в них                                          */
+
+    gap: 100px 50px;
+    /* сначала указывается отступ между строками, потом между колонками */
+    /* column-gap: 50px; */
+    /* column-gap делает отступы между колонок */
+
+    /* row-gap: 50px; */
+    /* row-gap делает отступы между строками   */
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    /* grid-template: repeat(2, auto) / repeat(3, 1fr); */
+
+    /* grid-auto-columns: auto;                                  */
+    /* grid-auto-columns регулирует размер колонок неявной сетки */
+
+    /* grid-auto-rows: 300px ;                              */
+    /* grid-auto-rows регулирует размер строк неявной сетки */
+
+
+    grid-auto-flow: column;
+    /* row элементы выстраиваются в столбик    */
+    /* column элементы выстраиваются в строчку */
+}
+
+.grid-4 {
+    display: grid;
+    grid-template: repeat(3, 100px) / repeat(3, 1fr);
+}
+
+/* Строки между ячейками можно назвать, для этого между значений нужно указать ник в [] */
+/* [row1] 200px [row2] 200px [row3] 200px [row4]                                        */
+
+/* grid-column: 1 / 3; сначала задается старт, а потом конец */
+/* grid-column-start задает начало ячейки по вертикали       */
+/* grid-column-end задает конец ячейки по вертикали          */
+
+/* grid-row: 1 / 3; сначала задается старт, а потом конец */
+/* grid-row-start задает начало ячейки по горизонтали     */
+/* grid-row-end задает конец ячейки по горизонтали        */
+
+/* grid-area принимает 4 значения, разделенные                                        */
+/* косой чертой /: grid-row-start, grid-column-start, grid-row-end и grid-column-end. */
+
+/* order c его помощью можно задать номер элементу, номер должен стоять у всех нужных элементов  */
+
+.grid-4__item--1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.grid-4__item--2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.grid-4__item--3 {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.grid-4__item--6 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
