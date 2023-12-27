@@ -1,0 +1,109 @@
+/* ============================================BASE============================================= */
+body {
+    font-family: "Montserrat";
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+}
+
+/* ===========================================HEADER============================================ */
+.header {
+    padding: 1.4vw;
+    color: #25282B;
+    line-height: 24px;
+}
+
+.header__nav {
+    display: grid;
+    align-items: center;
+    grid-template: 1fr / repeat(3, 1fr);
+}
+
+.nav__ul-menu {
+    display: grid;
+    grid-template: 1fr / repeat(5, 1fr);
+}
+
+.nav__logo-block {
+    display: grid;
+    justify-items: center;
+}
+
+.logo-block__logo {
+    width: 105px;
+    height: 60px;
+}
+
+.nav__contact-links {
+    display: grid;
+    grid-template: 1fr / 5vw 5vw 4.2vw;
+    justify-content: end;
+    justify-items: end;
+    gap: 1.05vw;
+}
+
+/* ============================================MAIN============================================= */
+.main__advantages-sec {
+    max-height: 582px;
+}
+
+.bgvideo {
+    position: absolute;
+    right: 0;
+    top: 6vw;
+    width: 100%;
+    max-height: 582px;
+    z-index: -100;
+    object-fit: cover;
+}
+
+.advantages-sec__inner {
+    display: grid;
+    grid-template: repeat(3, 1fr) / 1fr;
+    justify-items: center;
+    align-items: center;
+    padding: 120px 0px;
+    max-height: 582px;
+    gap: 30px;
+}
+
+.inner__title {
+    color: #fff;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.inner__ul-advantages {
+    display: grid;
+    grid-template: repeat(3, 1fr) / 1fr;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 150%;
+    gap: 15px;
+}
+
+.ul-advantages__mini-icon {
+    margin-right: 18px;
+}
+
+.inner__button {
+    display: flex;
+    width: 288px;
+    padding: 18px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 100px;
+    background: #D0DCE7;
+    font-size: 16px;
+    font-weight: 500;
+    color:#1D6FB6;
+    text-align: center;
+}
